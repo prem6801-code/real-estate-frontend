@@ -1,28 +1,14 @@
-import './App.css';
+import { useState } from "react";
+import Appbar from "./components/Appbar";
+import RegisterandLogin from "./components/authComponent/RegisterandLogin";
 
 function App() {
+  const [login, setLogin] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+      <Appbar setLogin={setLogin} />
+      <RegisterandLogin login={login} />
+    </>
   );
 }
 
