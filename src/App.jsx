@@ -6,7 +6,7 @@ function App() {
   const [login, setLogin] = useState(true);
   return (
     <>
-      <Appbar setLogin={setLogin} />
+      <Appbar login={login} setLogin={setLogin} />
       <RegisterandLogin login={login} />
     </>
   );
